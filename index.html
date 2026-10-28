@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🌤 Weather App</h1>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+            >
+
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <p id="loading">Loading...</p>
+
+        <p id="error"></p>
+
+        <div id="weatherCard"></div>
+
+    </div>
+
+    <script src="weather.js"></script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <main class="container">
+
+        <header class="topbar">
+            <a class="logo" href="#">☀ WeatherNow</a>
+            <button id="themeBtn" class="theme-btn" type="button">
+                🌙 Dark mode
+            </button>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">YOUR DAILY WEATHER GUIDE</p>
+            <h1>Weather, wherever you are.</h1>
+            <p class="subtitle">
+                Find current conditions and your five-day forecast.
+            </p>
+
+            <form id="searchForm" class="search-box">
+                <span aria-hidden="true">⌕</span>
+                <input type="text" id="cityInput" placeholder="Search a city, e.g. Kozhikode" aria-label="City name"
+                    autocomplete="off" required>
+                <button id="searchBtn" type="submit">Search</button>
+            </form>
+
+            <p class="search-hint">Start typing to search automatically.</p>
+        </section>
+
+        <p id="loading" class="loading" role="status" aria-live="polite">
+            <span class="spinner"></span>
+            Getting your weather...
+        </p>
+
+        <p id="error" class="error" role="alert"></p>
+
+        <section id="weatherSection" hidden>
+            <div id="weatherCard" class="weather-card"></div>
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">PLAN AHEAD</p>
+                    <h2>5-Day Forecast</h2>
+                </div>
+            </div>
+
+            <div id="forecastCards" class="forecast-grid"></div>
+        </section>
+
+        <section class="favorites-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR SHORTLIST</p>
+                    <h2>Favorite Cities</h2>
+                </div>
+                <span id="favoriteCount" class="count">0 cities</span>
+            </div>
+
+            <div id="favoritesList" class="favorites-list"></div>
+        </section>
+
+        <footer>
+            Weather data provided by OpenWeatherMap.
+        </footer>
+        <script src="weather.js"></script>
+    </main>
+</body>
+
+</html>
